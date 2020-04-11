@@ -12,6 +12,7 @@ Group Project - README Template
 
 ## Overview
 ### Description
+Group Members: Alan Cao, Jing Li, Brandon Liu, Priya Pahal, Sarah Songeun Kim
 This app is used to look for events/free stuff on campus.
 
 ### App Evaluation
