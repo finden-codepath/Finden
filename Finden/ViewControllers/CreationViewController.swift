@@ -52,6 +52,7 @@ class CreationViewController: UIViewController, UIImagePickerControllerDelegate 
         let file = PFFileObject(name: "image.png", data: imageData!)
         
         let post = PFObject(className: "Posts")
+        post["title"] = titleTextField.text!
         post["description"] = descriptionTextView.text!
         post["location"] = locationTextField.text!
         post["eventDate"] = dateTextField.text!
@@ -66,5 +67,7 @@ class CreationViewController: UIViewController, UIImagePickerControllerDelegate 
                 print(error?.localizedDescription ?? "Error")
             }
         }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
