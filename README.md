@@ -1,7 +1,7 @@
 Group Project - README Template
 ===
 
-# Finden
+# APP_NAME_HERE (Yelp but for events/free stuff?)
 
 
 ## Table of Contents
@@ -28,18 +28,15 @@ This app is used to look for events/free stuff on campus.
 
 **Required Must-have Stories**
 
-- [x] User can register for an account
-- [ ] User can link the facebook account
-- [x] User can log in
-- [ ] User can log out
-- [ ] User can make a post
-- [x] User can view feed
-- [ ] User can view posts
-- [ ] User can scroll through list of posts
-- [x] User can tap to switch between tabs to look at list, tableview, or map.
-- [ ] User can zoom in or out on map
-- [ ] User can filter for event or free stuff
-- [ ] User can look at profile
+* User can register for an account
+* User can link the facebook account
+* User can log in/log out
+* User can make a post
+* User can view posts
+* User can scroll through list of posts
+* User can tap to switch between tabs to look at list, tableview, or map.
+* User can zoom in or out on map
+* User can filter for event or free stuff
 
 **Optional Nice-to-have Stories**
 
