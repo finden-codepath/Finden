@@ -382,3 +382,6 @@ This app is used to look for events/free stuff on campus.
     ```
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+# Progress 
+<img src="https://recordit.co/Oal6KGdhQg.gif">

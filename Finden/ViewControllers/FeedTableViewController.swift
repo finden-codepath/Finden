@@ -26,6 +26,7 @@ class FeedTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.rowHeight = 200
+        tableView.reloadData()
         
         let query = PFQuery(className: "Posts")
         query.includeKeys(["eventDate", "description", "location", "image"])
