@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class EventsFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -26,9 +27,9 @@ class EventsFeedViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Events")
-        
         query.includeKey("author")
         query.limit = 20
+        
         query.findObjectsInBackground { (events, error) in
             if events != nil {
                 self.events = events!
@@ -42,17 +43,17 @@ class EventsFeedViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = eventsTableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
         
         let event = events[indexPath.row]
-        
+        let cell = eventsTableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
         let user = event["author"] as! PFUser
         cell.eventnameLabel.text = event["event name"] as? String
         cell.eventlocationLabel.text = event["event location"] as? String
         cell.eventdateLabel.text = event["event date"] as? String
-
-        //something for image too
-        
+        let imageFile = event["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        cell.eventImageView.af_setImage(withURL: url)
         return cell
     }
     
