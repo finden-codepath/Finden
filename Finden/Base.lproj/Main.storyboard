@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oIU-jb-nnC">
-
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -83,6 +81,7 @@
                     <connections>
                         <outlet property="emailField" destination="00H-BV-Vnk" id="6or-DI-GBn"/>
                         <outlet property="passwordField" destination="qvM-xD-PnA" id="ENK-yz-iTs"/>
+                        <segue destination="fbe-SJ-yZN" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="ZwK-8h-G2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCU-jv-YMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,7 +154,6 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="onSignUp:" destination="Jl2-7g-f2E" eventType="touchUpInside" id="YOb-c2-4DV"/>
-                                    <segue destination="fbe-SJ-yZN" kind="presentation" identifier="registeredSegue" modalPresentationStyle="fullScreen" id="0em-AJ-sGa"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKB-te-TWt">
@@ -180,6 +178,7 @@
                         <outlet property="firstNameField" destination="5c6-AG-c6s" id="79q-nT-7UC"/>
                         <outlet property="lastNameField" destination="Bax-rv-zAm" id="1A2-2t-LPm"/>
                         <outlet property="passwordField" destination="4O6-cT-NiJ" id="xej-fS-cF1"/>
+                        <segue destination="fbe-SJ-yZN" kind="presentation" identifier="registeredSegue" modalPresentationStyle="fullScreen" id="nlX-nC-hpN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jye-zT-9N9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -282,7 +281,7 @@
             <objects>
                 <viewController id="b6O-Jg-vmc" customClass="EventDetailViewController" customModule="Finden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gci-xC-SdF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKu-WC-Sk2">
@@ -564,6 +563,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0em-AJ-sGa"/>
+        <segue reference="ZwK-8h-G2u"/>
     </inferredMetricsTieBreakers>
 </document>
